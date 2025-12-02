@@ -276,10 +276,10 @@
     </footer>
 
     <script>
-        // Initialize Lucide icons
+       
         lucide.createIcons();
 
-        // JavaScript for Mobile Navigation Toggle
+     
         const menuButton = document.getElementById('menu-button');
         const navLinks = document.getElementById('nav-links');
 
@@ -296,7 +296,7 @@
         menuButton.addEventListener('click', toggleMenu);
 
         window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) { // 768px is Tailwind's 'md' breakpoint
+            if (window.innerWidth >= 768) {
                 closeMenu();
             }
         });
@@ -305,28 +305,28 @@
             link.addEventListener('click', closeMenu);
         });
 
-        // *** STATUS MESSAGE HANDLING (SUCCESS/ERROR) ***
+       
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const status = params.get('status');
             const statusMessage = document.getElementById('form-status');
 
             if (status === 'success') {
-                // *** Displays the requested "successful sent" message in green ***
+               
                 statusMessage.innerHTML = '<p class="text-green-300 font-semibold text-lg inline-flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2"></i> successful sent</p>';
-                lucide.createIcons(); // Re-initialize lucide for the new icon
+                lucide.createIcons(); 
             } else if (status === 'error') {
-                // Displays an error message
+                
                 statusMessage.innerHTML = '<p class="text-red-400 font-semibold text-lg inline-flex items-center"><i data-lucide="alert-triangle" class="w-5 h-5 mr-2"></i> Oops! There was an error sending your message. Please try again.</p>';
-                lucide.createIcons(); // Re-initialize lucide for the new icon
+                lucide.createIcons(); 
             }
             
-            // Clear status message after a few seconds and clean the URL
+            
             if (status) {
                 setTimeout(() => {
                     history.replaceState({}, document.title, window.location.pathname + window.location.hash);
                     statusMessage.innerHTML = ''; 
-                }, 7000); // Message disappears after 7 seconds
+                }, 7000); 
             }
         });
 
