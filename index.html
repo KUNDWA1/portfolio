@@ -2,72 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio of Divine</title>
-    <link rel="stylesheet" href="new.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine's Backend & Embedded Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="newww.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-          <img src="Flower.jpeg" alt="My Profile" class="profile-pc">
-        <h1>_kundwa1</h1>
-        <nav id="navbar">
-            <a href="#Home" class="btn">Home</a>
-            <a href="#Services" class="btn">Services</a>
-            <a href="#Projects" class="btn">Projects</a>
-            <a href="#Contact" class="btn">Contact</a>
-        </nav>
+
+    <header class="sticky top-0 z-50 bg-white header-shadow">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            
+            <div class="flex items-center space-x-6">
+                <a href="#Home" class="text-2xl font-bold text-violet-700 hover:text-violet-900 transition duration-300">
+                    _kundwa1
+                </a>
+
+                <div class="hidden sm:flex items-center space-x-4 text-xl">
+                    <a href="mailto:kundwadevine@gmail.com" class="text-gray-500 hover:text-red-500 transition duration-300" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="tel:+250790110543" class="text-gray-500 hover:text-green-500 transition duration-300" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank" class="text-gray-500 hover:text-blue-700 transition duration-300" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/KUNDWA1" target="_blank" class="text-gray-500 hover:text-gray-800 transition duration-300" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+
+            <nav class="hidden md:flex space-x-6" id="navbar">
+                <a href="#Home" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">Home</a>
+                <a href="#About" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">About & Skills</a>
+                <a href="#Services" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">Services</a>
+                <a href="#Projects" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">Projects</a>
+                <a href="#Contact" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">Contact</a>
+            </nav>
+
+            <button id="menu-button" class="md:hidden text-gray-600 hover:text-violet-600 p-2 rounded-lg transition duration-300" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </button>
+        </div>
+
+        <div id="nav-links" class="md:hidden bg-gray-50 border-t border-gray-100">
+            <a href="#Home" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">Home</a>
+            <a href="#About" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">About & Skills</a>
+            <a href="#Services" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">Services</a>
+            <a href="#Projects" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">Projects</a>
+            <a href="#Contact" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">Contact</a>
+            
+            <div class="sm:hidden flex justify-center py-4 space-x-6 border-t border-gray-200">
+                <a href="mailto:kundwadevine@gmail.com" class="text-gray-600 hover:text-red-500" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+250790110543" class="text-gray-600 hover:text-green-500" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank" class="text-gray-600 hover:text-blue-700" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/KUNDWA1" target="_blank" class="text-gray-600 hover:text-gray-800" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
     </header>
 
-    <section id="Home">
-        <h1>Hello,  My name is _kundwa1</h1>
-        <p>
-            I’m _kundwa1, a backend-focused software developer with a growing interest in embedded systems. I enjoy building efficient server-side solutions and exploring how software connects with hardware.
-        </p>
-    </section>
-    <section id="Contact">
-    <h2>Contact Info</h2>
+    <main>
+        <section id="Home" class="section-padding bg-violet-50/50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
+                
+                <div class="md:w-3/5 lg:w-1/2 order-2 md:order-1 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight">
+                        Hello, I'm <span class="text-violet-600">_kundwa1</span>
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-600 max-w-lg mx-auto md:mx-0">
+                        A backend-focused software developer with a growing interest in embedded systems. I enjoy building efficient server-side solutions and exploring how software connects with hardware.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                        <a href="#Contact" class="px-6 py-3 bg-violet-600 text-white font-semibold rounded-lg shadow-md hover:bg-violet-700 transition duration-300 transform hover:scale-105">
+                            Hire Me
+                        </a>
+                        <a href="#Projects" class="px-6 py-3 bg-white text-violet-600 font-semibold border border-violet-600 rounded-lg shadow-md hover:bg-violet-50 transition duration-300 transform hover:scale-105">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
 
-<ul>
-    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:kundwadevine@gmail.com">Email</a></li>
-    <li><i class="fa-solid fa-phone"></i> <a href="tel:+250790110543">Phone</a></li>
-    <li><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/_kundwa1" target="_blank">Instagram</a></li>
-    <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank">LinkedIn</a></li>
-    <li><i class="fa-brands fa-github"></i> <a href="https://github.com/KUNDWA1" target="_blank">GitHub</a></li>
-</ul>
+                <div class="md:w-2/5 lg:w-1/3 order-1 md:order-2">
+                    <div class="w-64 h-64 md:w-80 md:h-80 mx-auto bg-gray-300 rounded-full overflow-hidden shadow-2xl ring-4 ring-violet-300/50">
+                        <img src="Flower.jpeg" 
+                            alt="Profile Picture of _kundwa1"
+                            class="object-cover w-full h-full"
+                            onerror="this.onerror=null; "
+                        >
+                    </div>
+                </div>
 
-</section>
+            </div>
+        </section>
 
-    <section id="Projects">
-        <div class="full-page-table">
-            <table class="center-table" border="1">
-                <tr>
-                    <td>
-                        <h3>Portfolio Highlights</h3>
-                        <ul>
-                            <li>AI-Powered Medical Diagnosis  And Referral System</li>
-                            <li>Rwanda Scholarship And Academic Pathway Advisor</li>
-                            <li>Emergency Resource Coordination Platform</li>
-                            <li>Library Management System</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <h3>Career Achievements</h3>
-                        <p>Web Development and Backend Skills Certificate from SheCanCode Training Rwanda</p>
-                        <p>Backend Developer [Intern] at Amalii Tech — headed major product redesigns resulting in a 40% increase in user engagement.</p>
-                        <a href="#" class="fa-brands fa-linkedin">View My LinkedIn Profile</a>
+        <section id="About" class="section-padding bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">About Me</h2>
 
-                        <h3>Community Involvement</h3>
-<p>
-    Community Involvement
-Active participant in local and online developer forums. Regularly contribute to web development blogs and GitHub projects.<br>
-    <a href="https://github.com/KUNDWA1" target="_blank">Visit My GitHub</a>
-</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    </td>
-                    <td>
-                        <h3>Academic Qualifications</h3>
-                        <p>BSc Hon. Software Engineering from AUCA (Adventist University of Central Africa)</p>
-                        <p>Specializations:</p>
-                        <ul>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-violet-100">
+                        <h3 class="text-2xl font-semibold text-violet-600 mb-4 flex items-center">
+                            <i data-lucide="graduation-cap" class="mr-3 w-6 h-6"></i>Academic Qualifications
+                        </h3>
+                        <p class="text-gray-700 mb-3">
+                            <span class="font-medium">BSc Hon. Software Engineering</span> from AUCA (Adventist University of Central Africa).
+                        </p>
+                        <h4 class="font-semibold text-lg text-gray-800 mt-4 mb-2">Specializations:</h4>
+                        <ul class="space-y-2 text-gray-600 list-disc pl-5">
                             <li>System Analysis</li>
                             <li>Database Management</li>
                             <li>Embedded C/C++ Programming</li>
@@ -75,42 +113,223 @@ Active participant in local and online developer forums. Regularly contribute to
                             <li>Cloud Computing Infrastructure</li>
                             <li>Advanced Algorithms</li>
                         </ul>
-                    </td>
-                </tr>
-            </table>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-violet-100">
+                        <h3 class="text-2xl font-semibold text-violet-600 mb-4 flex items-center">
+                            <i data-lucide="trophy" class="mr-3 w-6 h-6"></i>Career & Training
+                        </h3>
+                        <p class="text-gray-700 mb-4">
+                            Backend Developer [Intern] at Amalii Tech — During my internship, I focused on database-related tasks and contributed to major product improvements that helped increase user engagement by 40%.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            <span class="font-medium">Web Development and Backend Skills Certificate</span> from SheCanCode Training Rwanda.
+                        </p>
+                        <a href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank" class="text-violet-600 hover:text-violet-800 font-medium inline-flex items-center mt-2">
+                            <i class="fa-brands fa-linkedin mr-2"></i> View My LinkedIn Profile
+                        </a>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-violet-100">
+                        <h3 class="text-2xl font-semibold text-violet-600 mb-4 flex items-center">
+                            <i data-lucide="rocket" class="mr-3 w-6 h-6"></i>Portfolio Highlights
+                        </h3>
+                        <ul class="space-y-3 text-gray-600 list-inside">
+                            <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-1"></i>AI-Powered Medical Diagnosis And Referral System</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-1"></i>Rwanda Scholarship And Academic Pathway Advisor</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-1"></i>Emergency Resource Coordination Platform</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-1"></i>Library Management System</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-16 pt-8 border-t border-gray-200">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">What Peers Say</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 bg-violet-50 rounded-xl shadow-md border-l-4 border-violet-500 italic text-gray-700">
+                            "_kundwa1 consistently delivers high-quality, innovative solutions that exceed project expectations."
+                        </div>
+                        <div class="p-6 bg-violet-50 rounded-xl shadow-md border-l-4 border-violet-500 italic text-gray-700">
+                            "_kundwa1 is known for his precise attention to detail and his ability to mentor younger developers."
+                        </div>
+                        <div class="p-6 bg-violet-50 rounded-xl shadow-md border-l-4 border-violet-500 italic text-gray-700">
+                            “Kundwa1 is highly dedicated — a hardworking and patriotic individual who truly loves his country.”
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="Services" class="section-padding bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">My Services</h1>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="Services-card bg-white p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border border-gray-200 text-center">
+                        <i data-lucide="plug-2" class="mx-auto w-10 h-10 text-violet-600 mb-4"></i>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">API Development</h2>
+                        <p class="text-gray-600">Building robust RESTful and GraphQL APIs with secure endpoints, high performance, and proper documentation.</p>
+                    </div>
+
+                    <div class="Services-card bg-white p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border border-gray-200 text-center">
+                        <i data-lucide="database" class="mx-auto w-10 h-10 text-violet-600 mb-4"></i>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Database Management</h2>
+                        <p class="text-gray-600">Expertise in efficient database design, performance optimization (SQL/NoSQL), and reliable transaction handling.</p>
+                    </div>
+
+                    <div class="Services-card bg-white p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border border-gray-200 text-center">
+                        <i data-lucide="cloud" class="mx-auto w-10 h-10 text-violet-600 mb-4"></i>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Deployment & DevOps</h2>
+                        <p class="text-gray-600">Setting up Dockerization, CI/CD pipelines, secure server deployment, and continuous monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Projects" class="section-padding bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
+                        <h3 class="text-xl font-semibold text-violet-700 mb-3">Attendance Management System</h3>
+                        <p class="text-gray-600 mb-4">An Attendance Management System that allows students to request permission and upload proof when they are sick, while giving lecturers an easy interface to review and manage these requests.</p>
+                        <a href="http://localhost/project2" class="text-sm text-violet-600 hover:text-violet-800 font-medium inline-flex items-center">
+                            View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
+                        <h3 class="text-xl font-semibold text-violet-700 mb-3">AI Medical Diagnosis & Referral</h3>
+                        <p class="text-gray-600 mb-4">A system leveraging AI models to assist with medical diagnosis and streamline the patient referral process.</p>
+                        <a href="http://localhost/project2" class="text-sm text-violet-600 hover:text-violet-800 font-medium inline-flex items-center">
+                            View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
+                        <h3 class="text-xl font-semibold text-violet-700 mb-3">Rwanda Scholarship Advisor</h3>
+                        <p class="text-gray-600 mb-4">An academic pathway advisor offering personalized guidance on Rwandan scholarship opportunities and course selection.</p>
+                        <a href="#" class="text-sm text-violet-600 hover:text-violet-800 font-medium inline-flex items-center">
+                            View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="Contact" class="section-padding bg-gray-800 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 items-start justify-between">
+                
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-4xl font-bold mb-8">Send Me a Message</h2>
+                    <form action="submit_form.php" method="POST" class="space-y-6 bg-gray-700/50 p-8 rounded-xl shadow-2xl">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-violet-200 mb-1">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Full Name" required class="mt-1 block w-full px-4 py-2 text-gray-900 border-none rounded-lg shadow-sm focus:ring-violet-300 focus:border-violet-300 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-violet-200 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required class="mt-1 block w-full px-4 py-2 text-gray-900 border-none rounded-lg shadow-sm focus:ring-violet-300 focus:border-violet-300 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-violet-200 mb-1">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry, Collaboration, etc." required class="mt-1 block w-full px-4 py-2 text-gray-900 border-none rounded-lg shadow-sm focus:ring-violet-300 focus:border-violet-300 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-violet-200 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your idea..." required class="mt-1 block w-full px-4 py-2 text-gray-900 border-none rounded-lg shadow-sm focus:ring-violet-300 focus:border-violet-300 transition duration-150"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full px-6 py-3 bg-violet-500 text-white font-semibold rounded-lg shadow-md hover:bg-violet-600 transition duration-300 transform hover:scale-[1.01]">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                    <div id="form-status" class="mt-4 text-center"></div>
+                </div>
+
+                <div class="w-full lg:w-1/2 lg:pt-16 text-center lg:text-left">
+                    <h3 class="text-2xl font-semibold mb-4 text-violet-100">Let's Connect and Collaborate</h3>
+                    <p class="text-xl mb-6 text-violet-200">
+                        I'm always open to discussing new projects, collaboration opportunities, and complex backend challenges.
+                    </p>
+                    
+                    <div class="mt-10 pt-8 border-t border-violet-500 text-violet-200">
+                        <p class="font-semibold text-xl mb-3">Community Involvement</p>
+                        <p>I contribute to backend and embedded systems projects, sharing knowledge to help build smarter and more efficient technology.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-center text-gray-400 py-6">
+        <div class="container mx-auto px-4">
+            Software-Developer_kundwa1
         </div>
+    </footer>
 
-        <h2>Peer Review</h2>
-        <table border="1" width="100%">
-            <tr>
-                <td>_kundwa1 consistently delivers high-quality, innovative solutions that exceed project expectations.</td>
-                <td>_kundwa1 is known for his precise attention to detail and his ability to mentor younger developers.</td>
-                <td>_kundwa1's approach to problem-solving has been instrumental in our success.</td>
-            </tr>
-        </table>
-    </section>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
 
-    <section id="Services" class="Services-section">
-        <h1>My Services</h1>
-        <div class="Services-grid">
-            <div class="Services-card">
-                <img src="api-icon.png" alt="API icon">
-                <h2>API Development</h2>
-                <p>RESTful and GraphQL APIs with secure endpoints and proper documentation.</p>
-            </div>
-            <div class="Services-card">
-                <img src="database-icon.png" alt="Database icon">
-                <h2>Database Management</h2>
-                <p>Efficient database design, optimization, and transaction handling.</p>
-            </div>
-            <div class="Services-card">
-                <img src="devops-icon.png" alt="DevOps icon">
-                <h2>Deployment and DevOps</h2>
-                <p>Dockerization, CI/CD pipelines, server deployment, and monitoring.</p>
-            </div>
-        </div>
-    </section>
+        // JavaScript for Mobile Navigation Toggle
+        const menuButton = document.getElementById('menu-button');
+        const navLinks = document.getElementById('nav-links');
 
-    <footer>--kundwa1--</footer>
+        function toggleMenu() {
+            navLinks.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            if (navLinks.classList.contains('open')) {
+                navLinks.classList.remove('open');
+            }
+        }
+
+        menuButton.addEventListener('click', toggleMenu);
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // 768px is Tailwind's 'md' breakpoint
+                closeMenu();
+            }
+        });
+
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // *** STATUS MESSAGE HANDLING (SUCCESS/ERROR) ***
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const status = params.get('status');
+            const statusMessage = document.getElementById('form-status');
+
+            if (status === 'success') {
+                // *** Displays the requested "successful sent" message in green ***
+                statusMessage.innerHTML = '<p class="text-green-300 font-semibold text-lg inline-flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2"></i> successful sent</p>';
+                lucide.createIcons(); // Re-initialize lucide for the new icon
+            } else if (status === 'error') {
+                // Displays an error message
+                statusMessage.innerHTML = '<p class="text-red-400 font-semibold text-lg inline-flex items-center"><i data-lucide="alert-triangle" class="w-5 h-5 mr-2"></i> Oops! There was an error sending your message. Please try again.</p>';
+                lucide.createIcons(); // Re-initialize lucide for the new icon
+            }
+            
+            // Clear status message after a few seconds and clean the URL
+            if (status) {
+                setTimeout(() => {
+                    history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+                    statusMessage.innerHTML = ''; 
+                }, 7000); // Message disappears after 7 seconds
+            }
+        });
+
+    </script>
 </body>
 </html>

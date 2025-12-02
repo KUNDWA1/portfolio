@@ -1,0 +1,40 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+   
+    font-family: 'Inter', sans-serif;
+    
+    background-color: #f7f9fc;
+    color: #1f2937;
+}
+
+
+::selection {
+    
+    background-color: #ddd6fe; 
+  
+    color: #4c1d95; 
+}
+
+.section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.header-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+
+#nav-links {
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#nav-links.open {
+    max-height: 500px; 
+}
