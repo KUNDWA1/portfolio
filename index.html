@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-Portfolio</title>
+    <!-- For Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS (from newww.css) -->
     <link rel="stylesheet" href="newww.css">
+    <!-- For Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
+  
     <header class="sticky top-0 z-50 bg-white header-shadow">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
             
@@ -28,11 +33,13 @@
             </div>
 
 
+           
             <nav class="hidden md:flex space-x-6" id="navbar">
                 <a href="#Home" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">Home</a>
                 <a href="#About" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">About & Skills</a>
                 <a href="#Services" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">Services</a>
                 <a href="#Projects" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">Projects</a>
+                <a href="#Blog" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">Blog</a>
                 <a href="#Contact" class="text-gray-600 hover:text-violet-600 font-medium transition duration-300">Contact</a>
             </nav>
 
@@ -41,11 +48,13 @@
             </button>
         </div>
 
+      
         <div id="nav-links" class="md:hidden bg-gray-50 border-t border-gray-100">
             <a href="#Home" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">Home</a>
             <a href="#About" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">About & Skills</a>
             <a href="#Services" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">Services</a>
             <a href="#Projects" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">Projects</a>
+            <a href="#Blog" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">Blog</a>
             <a href="#Contact" class="block py-3 px-4 text-gray-700 hover:bg-violet-100 transition duration-300" onclick="closeMenu()">Contact</a>
             
             <div class="sm:hidden flex justify-center py-4 space-x-6 border-t border-gray-200">
@@ -58,6 +67,7 @@
     </header>
 
     <main>
+      
         <section id="Home" class="section-padding bg-violet-50/50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
                 
@@ -80,10 +90,11 @@
 
                 <div class="md:w-2/5 lg:w-1/3 order-1 md:order-2">
                     <div class="w-64 h-64 md:w-80 md:h-80 mx-auto bg-gray-300 rounded-full overflow-hidden shadow-2xl ring-4 ring-violet-300/50">
+                        
                         <img src="Flower.jpeg" 
-                            alt="Profile Picture of _kundwa1"
+                            alt="my profile picture"
                             class="object-cover w-full h-full"
-                            onerror="this.onerror=null; "
+                            onerror="this.onerror=null; this.src='https://placehold.co/320x320/a78bfa/ffffff?text=_kundwa1';"
                         >
                     </div>
                 </div>
@@ -150,10 +161,10 @@
                             "_kundwa1 consistently delivers high-quality, innovative solutions that exceed project expectations."
                         </div>
                         <div class="p-6 bg-violet-50 rounded-xl shadow-md border-l-4 border-violet-500 italic text-gray-700">
-                            "_kundwa1 is known for his precise attention to detail and his ability to mentor younger developers."
+                            "_kundwa1 is known for her precise attention to detail and her ability to mentor younger developers."
                         </div>
                         <div class="p-6 bg-violet-50 rounded-xl shadow-md border-l-4 border-violet-500 italic text-gray-700">
-                            “Kundwa1 is highly dedicated — a hardworking and patriotic individual who truly loves his country.”
+                            “Kundwa1 is highly dedicated — a hardworking and patriotic individual who truly loves her country.”
                         </div>
                     </div>
                 </div>
@@ -161,6 +172,7 @@
         </section>
 
 
+       
         <section id="Services" class="section-padding bg-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">My Services</h1>
@@ -188,40 +200,120 @@
             </div>
         </section>
 
+    
         <section id="Projects" class="section-padding bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Featured Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
-                        <h3 class="text-xl font-semibold text-violet-700 mb-3">Attendance Management System</h3>
-                        <p class="text-gray-600 mb-4">An Attendance Management System that allows students to request permission and upload proof when they are sick, while giving lecturers an easy interface to review and manage these requests.</p>
-                        <a href="http://localhost/project2" class="text-sm text-violet-600 hover:text-violet-800 font-medium inline-flex items-center">
-                            View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                        <img src="stdnt.png" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x300/1e3a8a/ffffff?text=AI+Future';"
+                        >
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
+                            <h3 class="text-xl font-semibold text-violet-700 mb-3">Attendance Management System</h3>
+                            <p class="text-gray-600 mb-4">An Attendance Management System that allows students to request permission and upload proof when they are sick, while giving lecturers an easy interface to review and manage these requests.</p>
+                            <a href="http://localhost/project2" class="text-sm text-violet-600 hover:text-violet-800 font-medium inline-flex items-center">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
-                        <h3 class="text-xl font-semibold text-violet-700 mb-3">AI Medical Diagnosis & Referral</h3>
-                        <p class="text-gray-600 mb-4">A system leveraging AI models to assist with medical diagnosis and streamline the patient referral process.</p>
-                        <a href="http://localhost/project2" class="text-sm text-violet-600 hover:text-violet-800 font-medium inline-flex items-center">
-                            View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
+
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                        <img src="prjAi.png" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x300/1e3a8a/ffffff?text=AI+Future';"
+                        >
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
+                            <h3 class="text-xl font-semibold text-violet-700 mb-3">AI Medical Diagnosis & Referral</h3>
+                            <p class="text-gray-600 mb-4">A system leveraging AI models to assist with medical diagnosis and streamline the patient referral process.</p>
+                            <a href="http://localhost/project2" class="text-sm text-violet-600 hover:text-violet-800 font-medium inline-flex items-center">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
-                        <h3 class="text-xl font-semibold text-violet-700 mb-3">Rwanda Scholarship Advisor</h3>
-                        <p class="text-gray-600 mb-4">An academic pathway advisor offering personalized guidance on Rwandan scholarship opportunities and course selection.</p>
-                        <a href="#" class="text-sm text-violet-600 hover:text-violet-800 font-medium inline-flex items-center">
-                            View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
+
+
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                        <img src="PrjSch.png" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x300/1e3a8a/ffffff?text=AI+Future';"
+                        >
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-200">
+                            <h3 class="text-xl font-semibold text-violet-700 mb-3">Rwanda Scholarship Advisor</h3>
+                            <p class="text-gray-600 mb-4">An academic pathway advisor offering personalized guidance on Rwandan scholarship opportunities and course selection.</p>
+                            <a href="#" class="text-sm text-violet-600 hover:text-violet-800 font-medium inline-flex items-center">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="Blog" class="section-padding bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Latest Insights</h2>
+                <p class="text-xl text-center text-gray-600 mb-12">Explore forward-thinking articles on backend engineering, data analytics, and the future of embedded systems in the AI era.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                  
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                        <img src="ftrAi.png" 
+                            alt="Futuristic AI concept image"
+                            class="w-full h-48 object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x300/1e3a8a/ffffff?text=AI+Future';"
+                        >
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">The Future of Backend Engineering</h3>
+                            <p class="text-gray-600 mb-4">How modern backend architectures microservices, serverless, and distributed systems are shaping the next generation of scalable applications..</p>
+                            <a href="https://moldstud.com/articles/p-emerging-backend-development-trends-to-anticipate-in-2024-featuring-key-innovations-and-future-predictions?" class="inline-block px-4 py-2 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition duration-300">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                        <img src="DataAn.png" 
+                            alt="Interconnected digital devices" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x300/059669/ffffff?text=Digital+Transformation';"
+                        >
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">Data Analytics for Smarter Systems</h3>
+                            <p class="text-gray-600 mb-4">Exploring how real-time data processing and analytics pipelines help organizations make faster, smarter, and more accurate decisions.</p>
+                            <a href="https://ijaibdcms.org/index.php/ijaibdcms/article/view/39" class="inline-block px-4 py-2 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition duration-300">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                        <img src="Embe.png" 
+                            alt="Strategy, Planning, and Success gears" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x300/7c3aed/ffffff?text=UX+Design+Tips';"
+                        >
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">Embedded Systems in the AI Era</h3>
+                            <p class="text-gray-600 mb-4"> A look at how artificial intelligence is transforming embedded devices, from low-power IoT sensors to advanced industrial controllers.</p>
+                            <a href="https://livewireindia.com/blog/latest-trends-in-embedded-systems-2025-ai-iot-edge-computing-smart-devices/" class="inline-block px-4 py-2 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition duration-300">
+                                Read More
+                            </a>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </section>
 
+
+       
         <section id="Contact" class="section-padding bg-gray-800 text-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 items-start justify-between">
                 
@@ -276,15 +368,20 @@
     </footer>
 
     <script>
-       
+        
         lucide.createIcons();
 
-     
+
         const menuButton = document.getElementById('menu-button');
         const navLinks = document.getElementById('nav-links');
 
         function toggleMenu() {
-            navLinks.classList.toggle('open');
+            
+            if (navLinks.classList.contains('open')) {
+                navLinks.classList.remove('open');
+            } else {
+                navLinks.classList.add('open');
+            }
         }
 
         function closeMenu() {
@@ -296,34 +393,39 @@
         menuButton.addEventListener('click', toggleMenu);
 
         window.addEventListener('resize', () => {
+
             if (window.innerWidth >= 768) {
                 closeMenu();
             }
         });
 
+  
         document.querySelectorAll('#nav-links a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
 
-       
+        
+      
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const status = params.get('status');
             const statusMessage = document.getElementById('form-status');
 
             if (status === 'success') {
-               
+                
                 statusMessage.innerHTML = '<p class="text-green-300 font-semibold text-lg inline-flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2"></i> successful sent</p>';
                 lucide.createIcons(); 
             } else if (status === 'error') {
-                
-                statusMessage.innerHTML = '<p class="text-red-400 font-semibold text-lg inline-flex items-center"><i data-lucide="alert-triangle" class="w-5 h-5 mr-2"></i> Oops! There was an error sending your message. Please try again.</p>';
+               
+                const msg = params.get('msg') || 'Oops! There was an error sending your message. Please try again.';
+                statusMessage.innerHTML = `<p class="text-red-400 font-semibold text-lg inline-flex items-center"><i data-lucide="alert-triangle" class="w-5 h-5 mr-2"></i> ${decodeURIComponent(msg)}</p>`;
                 lucide.createIcons(); 
             }
             
-            
+         
             if (status) {
                 setTimeout(() => {
+                   
                     history.replaceState({}, document.title, window.location.pathname + window.location.hash);
                     statusMessage.innerHTML = ''; 
                 }, 7000); 
